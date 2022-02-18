@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/simotae14/node-express-api/issues"
   },
-  "homepage": "https://github.com/simotae14/node-express-api#readme"
+  "homepage": "https://github.com/simotae14/node-express-api#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
 }
