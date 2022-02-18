@@ -15,6 +15,16 @@ const friends = [
   }
 ];
 
+// create custom middleware for loggin
+app.use((req, res, next) => {
+  // start time request
+  const start =  Date.now();
+  next();
+  // actions executed after return route
+  // time passed in milliseconds bewteen request and response
+  const delta = Date.now() - start;
+  console.log(`${req.method} ${req.url} ${delta}ms`);
+});
 
 // define a ROUTE
 app.get('/friends', (req, res) => {
